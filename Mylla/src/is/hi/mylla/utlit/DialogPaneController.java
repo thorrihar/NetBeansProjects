@@ -53,6 +53,7 @@ public class DialogPaneController implements Initializable {
         
         // Innihald sett sem Pane sem fengið er úr Scene builder 
         p.setContent(dialog);
+        //
         
         // Umgjörðin búin til 
         Dialog d = new Dialog();
