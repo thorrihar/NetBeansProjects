@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<GridPane layoutX="323.0" layoutY="30.0" prefHeight="537.0" prefWidth="120.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.yahtzee.utlit.TeningarController">
+         <children>
+            <Label fx:id="jTeningur0" onMouseClicked="#jTeningurGeyma" prefHeight="109.0" prefWidth="132.0">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="66.0" onMouseClicked="#jTeningurGeyma" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Label>
+            <Label fx:id="jTeningur1" onMouseClicked="#jTeningurGeyma" prefHeight="148.0" prefWidth="135.0" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="69.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Label>
+            <Label fx:id="jTeningur2" onMouseClicked="#jTeningurGeyma" prefHeight="140.0" prefWidth="161.0" GridPane.rowIndex="2">
+               <graphic>
+                  <ImageView fitHeight="79.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Label>
+            <Label fx:id="jTeningur3" onMouseClicked="#jTeningurGeyma" prefHeight="136.0" prefWidth="144.0" GridPane.rowIndex="3">
+               <graphic>
+                  <ImageView fitHeight="74.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Label>
+            <Label fx:id="jTeningur4" onMouseClicked="#jTeningurGeyma" prefHeight="173.0" prefWidth="134.0" GridPane.rowIndex="4">
+         <graphic>
+                  <ImageView fitHeight="85.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic></Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>

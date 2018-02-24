@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<MenuBar prefHeight="62.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.nested.utlit.ValmyndController">
+                 <menus>
+                   <Menu mnemonicParsing="false" text="Skra">
+                     <items>
+                       <MenuItem mnemonicParsing="false" onAction="#nyrLeikurHandler" text="Nýr leikur" />
+                     </items>
+                   </Menu>
+                   <Menu mnemonicParsing="false" text="Breyta" />
+                   <Menu mnemonicParsing="false" text="Hjálp">
+                     <items>
+                       <MenuItem mnemonicParsing="false" text="Um forritið" />
+                     </items>
+                   </Menu>
+                 </menus>
+               </MenuBar>

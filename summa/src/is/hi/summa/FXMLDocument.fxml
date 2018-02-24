@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="433.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="is.hi.summa.FXMLDocumentController">
+    <children>
+        <Button fx:id="jSamasem" layoutX="264.0" layoutY="80.0" onAction="#jJafntOgActionPerformed" prefHeight="31.0" prefWidth="36.0" text="=" />
+      <TextField fx:id="jTalaInntak" alignment="CENTER" layoutX="8.0" layoutY="80.0" onAction="#jTalaInntakActionPerformed" prefHeight="33.0" prefWidth="101.0" style="-fx-border-color: gray;" />
+      <Label fx:id="jPlus" alignment="CENTER" layoutX="114.0" layoutY="80.0" prefHeight="31.0" prefWidth="43.0" text="+" />
+      <Label fx:id="jUtkoma" layoutX="316.0" layoutY="80.0" prefHeight="31.0" prefWidth="92.0" style="-fx-border-width: 1px; -fx-border-color: gray;" />
+      <Label fx:id="jRandomTala" layoutX="157.0" layoutY="80.0" prefHeight="31.0" prefWidth="92.0" style="-fx-border-width: 1px; -fx-border-color: black;" styleClass="-fx-background-color" wrapText="true" />
+    </children>
+</AnchorPane>

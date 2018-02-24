@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="538.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.nested.utlit.AdalController">
+   <children>
+      <VBox prefHeight="538.0" prefWidth="695.0">
+         <children>
+           <fx:include fx:id="valmynd" source="Valmynd.fxml" />
+            <HBox prefHeight="558.0" prefWidth="695.0">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="149.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="0.0" prefWidth="51.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ToggleButton fx:id="asarHnappur" mnemonicParsing="false" prefHeight="170.0" prefWidth="149.0" style="-fx-border-color: black;" text="Ásar" />
+                        <ToggleButton fx:id="tvistarHnappur" mnemonicParsing="false" prefHeight="172.0" prefWidth="149.0" style="-fx-border-color: black;" text="Tvistar" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" prefHeight="181.0" prefWidth="164.0" style="-fx-border-color: black;" text="Samtals" GridPane.rowIndex="2" />
+                        <Label fx:id="samtals" alignment="CENTER" prefHeight="181.0" prefWidth="164.0" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="tvistar" alignment="CENTER" prefHeight="181.0" prefWidth="164.0" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="asar" alignment="CENTER" prefHeight="181.0" prefWidth="164.0" style="-fx-border-color: black;" text="0" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children></HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

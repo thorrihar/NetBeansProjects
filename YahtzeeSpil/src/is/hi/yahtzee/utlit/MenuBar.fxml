@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.yahtzee.utlit.MenuBarController">
+        <menus>
+          <Menu mnemonicParsing="false" text="Skrá">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#NyrLeikurHandler" text="Nýr Leikur" />
+                  <MenuItem mnemonicParsing="false" onAction="#HaettaHandler" text="Hætta" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Hjálp">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#leikreglurHandler" text="Leikreglur" />
+                  <MenuItem mnemonicParsing="false" onAction="#umForritidHandler" text="Um forritið" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="324.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.FXMLDocumentController">
+   <children>
+      
+      <MenuBar layoutY="6.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Skra">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#nofnHandler" text="Nýr leikur" />
+              <MenuItem mnemonicParsing="false" text="Hætta" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <fx:include fx:id="dialog" source="dialog.fxml" />
+   </children>
+</AnchorPane>

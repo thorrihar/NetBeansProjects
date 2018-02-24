@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.spil.utlit.SpilController">
+    <children>
+        <Button fx:id="button" layoutX="126" layoutY="90" onAction="#handleButtonAction" text="Click Me!" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Skrá">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#nyrLeikurHandler" text="Nýr leikur" />
+                  <MenuItem mnemonicParsing="false" text="Hætta" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Breyta">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Tól">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Headers" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Hjálp">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Leikreglur" />
+                  <MenuItem mnemonicParsing="false" onAction="#umForritidHandler" text="Um forritið" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>

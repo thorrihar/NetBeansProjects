@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import is.hi.mylla.utlit.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.mylla.utlit.MyllaAdalController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="605.0" prefWidth="847.0">
+        <items>
+            <MyllaPane fx:id="myllaBord" prefHeight="668.0" prefWidth="386.0">
+               <children>
+                  <Canvas fx:id="mittCanvas" height="605.0" width="415.0" />
+               </children></MyllaPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="482.0" prefWidth="373.0">
+               <children>
+                  <Label fx:id="skilabod" layoutX="48.0" layoutY="269.0" prefHeight="64.0" prefWidth="190.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</Group>

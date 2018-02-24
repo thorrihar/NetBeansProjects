@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="260.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.hi.hnappar.vidmot.HnapparController">
+   <children>
+      <HBox layoutX="1.0" layoutY="-1.0" prefHeight="260.0" prefWidth="300.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="jReikniGluggi" alignment="CENTER" editable="false" layoutY="55.0" prefHeight="31.0" prefWidth="135.0" />
+                  <GridPane layoutY="86.0" prefHeight="66.0" prefWidth="135.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="10.0" prefWidth="66.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="69.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="jB1" mnemonicParsing="false" onAction="#jTolurActionPerformed" prefHeight="31.0" prefWidth="66.0" text="1" />
+                        <Button fx:id="jB2" mnemonicParsing="false" onAction="#jTolurActionPerformed" prefHeight="31.0" prefWidth="70.0" text="2" GridPane.columnIndex="1" />
+                        <Button fx:id="jB3" mnemonicParsing="false" onAction="#jTolurActionPerformed" prefHeight="31.0" prefWidth="65.0" text="3" GridPane.rowIndex="1" />
+                        <Button fx:id="jB4" mnemonicParsing="false" onAction="#jTolurActionPerformed" prefHeight="31.0" prefWidth="74.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <VBox prefHeight="260.0" prefWidth="122.0">
+               <children>
+                  <Label fx:id="jRassi" prefHeight="48.0" prefWidth="153.0">
+                     <graphic>
+                        <ImageView fitHeight="157.0" fitWidth="165.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                           <image>
+                              <Image url="@myndir/four.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <TextField fx:id="jTala" onAction="#jTeningurTalaHandler" prefHeight="53.0" prefWidth="153.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

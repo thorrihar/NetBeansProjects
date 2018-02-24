@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="YahtzeeSpil.jnlp">
+  <information>
+    <title>YahtzeeSpil</title>
+    <vendor>Þorri</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="YahtzeeSpil.jar" size="28932" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="YahtzeeSpil" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="is.hi.yahtzee.utlit.YahtzeeMain"  name="YahtzeeSpil" />
+  <update check="always"/>
+</jnlp>
