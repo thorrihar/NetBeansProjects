@@ -18,9 +18,10 @@ public class Mylla {
 
     private static final int LEIKMENN = 2;
     private final int[] Leikmadur = {1, 2};
+    private int fjoldiPeda = 0;
 
     int[][] bord = new int[3][3];
-    int nuverandiLeikmadur = 1;
+    int nuverandiLeikmadur = 1; 
 
     /**
      * Smiður sem býr til vinnsluhlut fyrir myllu. Frumstillir borð þannig að
@@ -155,8 +156,6 @@ public class Mylla {
         // Skilar -1 ef ekki fannst vinningur, annars tölu á bilinu 0-7
         return vinningur;
     }
-    
-    int fjoldiPeda = 0;
     
     public int FjoldiPeda(){
         return fjoldiPeda;

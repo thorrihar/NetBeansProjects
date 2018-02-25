@@ -32,5 +32,4 @@ public abstract class Ped {
      * @param event upplýsingar um released atburðurinn - notum (x,y)
      */
     protected abstract void faeraHlut(Shape s, MouseEvent event);
-
 }
