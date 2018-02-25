@@ -49,7 +49,7 @@ public class Ferningur extends Ped {
      */
     public Ferningur (MyllaPane b, Color l) {
             super(b);
-            ped = new Rectangle(200, 200, 50, 50);
+            ped = new Rectangle(225, 500, 50, 50);
             ped.setStroke(l);
             ped.setFill(l);
             ped.setOnMouseDragged(mouseDragged);

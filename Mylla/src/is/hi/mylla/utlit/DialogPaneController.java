@@ -34,12 +34,15 @@ public class DialogPaneController implements Initializable {
     @FXML
     private TextField leikmadur2Nafn;
     
+    private String[] nofn;
+    
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        nofn = new String[2];
         // TODO
     }    
     /**
@@ -53,7 +56,6 @@ public class DialogPaneController implements Initializable {
         
         // Innihald sett sem Pane sem fengið er úr Scene builder 
         p.setContent(dialog);
-        //
         
         // Umgjörðin búin til 
         Dialog d = new Dialog();
@@ -87,10 +89,13 @@ public class DialogPaneController implements Initializable {
         Optional<ButtonType> utkoma = d.showAndWait();
         if (utkoma.isPresent() && (utkoma.get()
                 .getButtonData() == ButtonBar.ButtonData.OK_DONE)) {
-            System.out.println("Leikmaður 1 heitir " + leikmadur1Nafn.getText());
-            System.out.println("Leikmaður 2 heitir " + leikmadur2Nafn.getText());
+            nofn[0] = leikmadur1Nafn.getText();
+            nofn[1] = leikmadur2Nafn.getText();
         } else {
             System.out.println("Leikmenn nafnlausir");
         }
+    }
+    public String[] Nofn(){
+        return nofn;
     }
 }

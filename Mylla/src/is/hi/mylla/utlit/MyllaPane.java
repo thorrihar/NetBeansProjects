@@ -35,7 +35,7 @@ public class MyllaPane extends Pane {
     }
 
     // Vinnsluklasinn sem heldur utan um mylluborðið og leikmenn
-    private final Mylla mittBord = new Mylla();
+    public final Mylla mittBord = new Mylla();
     
    /**
     * Teiknar grunnborð myllunnar á graphics context g. 
@@ -59,25 +59,45 @@ public class MyllaPane extends Pane {
      * @param y y-gildi hnits
      */
     public void setjaABord(int x, int y) {
-
-        mAdal.birtaVilluskilaboð("peð lendir á borði");
-        
-       
+        int reitur = -1;
+        for(int i=0; i<9; i++){
+            if(reitir[i].erInnan(x,y)){
+                reitur = i;  
+                System.out.println("Reitur nr." + i);
+            }
+        }
+      if (reitur != -1){
+          if (!mittBord.erThegarABordi(reitur)){
+              mittBord.setjaABord(reitur);
+              mAdal.birtaVilluskilaboð("");
+              if(mittBord.vinningur() != -1){
+                  mAdal.Sigur(mittBord.getNuverandiLeikmadur());
+                  //mAdal.jLeikmadur1.setDisable(true);
+                  //mAdal.jLeikmadur2.setDisable(true);    
+              }
+          }
+          else{
+              mAdal.birtaVilluskilaboð("Veldu annan reit");       
+                    }
+      }
+      else{
+           mAdal.birtaVilluskilaboð("peð er utan reits"); 
+      }    
     }
-    
-
-    
     /**
      * Setur út nýtt peð fyrir leikmann l ef fjöldi peða hefur ekki náð hámarki
      *
      * @param l LEIKMADUR1 eða LEIKMADUR2
      */
+    
     private void nyttPed(int l) {
         Ped s;
+        Color graenn = Color.web("#DC143C",1.0);
+        Color raudur = Color.web("#3CB371",1.0);
         if (l == 1) {
-            s = new Ferningur(this, Color.RED);
+            s = new Ferningur(this, graenn);
         } else {
-            s = new Hringur(this, Color.GREEN);
+            s = new Hringur(this, raudur);
         }
 
         this.getChildren().add(s.getPed());
@@ -93,5 +113,17 @@ public class MyllaPane extends Pane {
                 reitir[i*3+j] = new MylluReitur(upphx+breidd*j, upphy+haed*i, breidd, haed);
             }
         }
+    }
+    void NyrLeikur(){
+        mAdal.jSigur.setText("");
+        mAdal.birtaVilluskilaboð("");
+        while(this.getChildren().size()>1){
+            this.getChildren().remove(2);
+        }
+       
+       // mAdal.jLeikmadur1.setSelected(false);
+      //  mAdal.jLeikmadur2.setSelected(false);
+      //  mAdal.jLeikmadur1.setDisable(false);
+       // mAdal.jLeikmadur2.setDisable(false); 
     }
 }

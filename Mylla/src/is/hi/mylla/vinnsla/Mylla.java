@@ -58,7 +58,15 @@ public class Mylla {
     public void setNuverandiLeikmadur(int n) {
         nuverandiLeikmadur = n;
     }
-
+    
+    public void HreinsaBord(){
+        for(int i=0; i<3; i++){
+            for(int j=0; j<3; j++){
+                bord[i][j] = -1;
+            }
+        }
+    }
+    
     /**
      * Skilar true ef peð er þegar á reit n
      *
