@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Þorri Harðarson
+ * thh170@hi.is
+ * Mylla
  */
 
 package is.hi.mylla.utlit;
-
-
 
 import is.hi.mylla.vinnsla.Mylla;
 import javafx.scene.canvas.GraphicsContext;
@@ -16,7 +14,7 @@ import javafx.scene.paint.Color;
 /**
  * Viðmótshlutur sem teiknar mylluborð, býr til peð og meðhöndlar aðgerð þegar 
  * peð er sett á borð 
- * @author Ebba Þóra Hvannberg ebba@hi.is 
+ * @author Þorri Harðarson, thh170@hi.is
  * @date 
  * Háskóli Íslands
  */
@@ -29,7 +27,10 @@ public class MyllaPane extends Pane {
     public MyllaPane () { 
         
     }
-    
+    /**
+     * Nýtt peð birtist á borði.
+     * @param leikmadur 
+     */
     public void leikmadurGerir(int leikmadur) {
         nyttPed(leikmadur);
     }
@@ -53,8 +54,8 @@ public class MyllaPane extends Pane {
     
     /**
      * Athugar á hvaða reit peð er, hvort peð er þegar á þeim reit setur peðið á
-     * þann reit og athugar hvort það er vinningur.
-     *
+     * þann reit og athugar hvort það er vinningurn og gefur villumeldingu.
+     * Einnig lætur fallið vita ef það er jafntefli.
      * @param x x-gildi hnits
      * @param y y-gildi hnits
      */
@@ -71,9 +72,7 @@ public class MyllaPane extends Pane {
               mittBord.setjaABord(reitur);
               mAdal.birtaVilluskilaboð("");
               if(mittBord.vinningur() != -1){
-                  mAdal.Sigur(mittBord.getNuverandiLeikmadur());
-                  //mAdal.jLeikmadur1.setDisable(true);
-                  //mAdal.jLeikmadur2.setDisable(true);    
+                  mAdal.Sigur(mittBord.getNuverandiLeikmadur());  
               }
           }
           else{
@@ -82,14 +81,17 @@ public class MyllaPane extends Pane {
       }
       else{
            mAdal.birtaVilluskilaboð("peð er utan reits"); 
-      }    
+      } 
+      if (mittBord.FjoldiPeda() == 9){
+        mAdal.anchor.setDisable(true); 
+        mAdal.jSigur.setText("Jafntefli!");
+      }
     }
     /**
      * Setur út nýtt peð fyrir leikmann l ef fjöldi peða hefur ekki náð hámarki
      *
      * @param l LEIKMADUR1 eða LEIKMADUR2
      */
-    
     private void nyttPed(int l) {
         Ped s;
         Color graenn = Color.web("#DC143C",1.0);
@@ -106,6 +108,13 @@ public class MyllaPane extends Pane {
     void setAdal(MyllaAdalController aThis) {
         mAdal = aThis;
     }
+    /**
+     * Fallið býr til myllureitina.
+     * @param upphx
+     * @param upphy
+     * @param breidd
+     * @param haed 
+     */
     void Reitir(int upphx, int upphy, int breidd, int haed){
         reitir = new MylluReitur[9];
         for(int i=0; i<3; i++){
@@ -114,6 +123,9 @@ public class MyllaPane extends Pane {
             }
         }
     }
+    /**
+     * Þetta fall núllstillir allt og hefur nýjan leik.
+     */
     void NyrLeikur(){
         mAdal.jSigur.setText("");
         mAdal.birtaVilluskilaboð("");
@@ -121,10 +133,5 @@ public class MyllaPane extends Pane {
         while(this.getChildren().size()>1){
             this.getChildren().remove(2);
         }
-       
-       // mAdal.jLeikmadur1.setSelected(false);
-      //  mAdal.jLeikmadur2.setSelected(false);
-      //  mAdal.jLeikmadur1.setDisable(false);
-       // mAdal.jLeikmadur2.setDisable(false); 
     }
 }

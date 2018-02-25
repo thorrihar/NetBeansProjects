@@ -1,7 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Þorri Harðarson
+ * thh170@hi.is
+ * Mylla
  */
 package is.hi.mylla.utlit;
 
@@ -20,7 +20,7 @@ import javafx.scene.layout.AnchorPane;
 /**
  * Controller fyrir mylluna. Er núna mjög einfaldur 
  * 
- * @author Ebba Þóra Hvannberg ebba@hi.is
+ * @author Þorri Harðarson, thh170@hi.is
  */
 public class MyllaAdalController implements Initializable {
     
@@ -30,9 +30,7 @@ public class MyllaAdalController implements Initializable {
     private MyllaPane myllaBord;    // Mylluborðið 
     @FXML
     private Canvas mittCanvas;      // Teiknisvæði 
-    
     //@FXML
-    //private DialogPaneController dialogController;
     @FXML
     private DialogPaneController dialogController;
     @FXML
@@ -46,11 +44,16 @@ public class MyllaAdalController implements Initializable {
     @FXML
     private MenuItem jHaetta;
     //@FXML
-    //public AnchorPane anchor;
     @FXML
     public AnchorPane anchor;
     
-    
+    /**
+     * Þetta fall upphafsstillir allann leikinn,
+     * teiknar mylluborðið, keyrir upp dialoginn
+     * og stillir nöfn leikmannana.
+     * @param url
+     * @param rb 
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         myllaBord.setAdal(this);
@@ -70,36 +73,51 @@ public class MyllaAdalController implements Initializable {
     public void birtaVilluskilaboð(String s) {
           skilabod.setText(s);
     }
- 
+    /**
+     * Þetta fall stillir Label með nöfn leikmanna, og leyfir nýjan leik.
+     * @param event 
+     */
     @FXML
     private void nofnHandler(ActionEvent event) {
         dialogController.hvadHeitaLeikmenn();
         jLeikmadur1.setText(dialogController.Nofn()[0]);
         jLeikmadur2.setText(dialogController.Nofn()[1]);
         anchor.setDisable(false);
-        myllaBord.NyrLeikur(); 
-        
+        myllaBord.NyrLeikur();    
     }
-
+    /**
+     * Þetta fall segir að leikmaður 1 var að gera leik.
+     * @param event 
+     */
     @FXML
     private void leikmadur1Handler(ActionEvent event) {
         myllaBord.leikmadurGerir(1);
         skilabod.setText("");
         myllaBord.mittBord.setNuverandiLeikmadur(1);
     }
-
+    /**
+     * Þetta fall segir að leikmaður 3 var að gera leik.
+     * @param event 
+     */
     @FXML
     private void leikmadur2Handler(ActionEvent event) {
         myllaBord.leikmadurGerir(2);
         skilabod.setText("");
         myllaBord.mittBord.setNuverandiLeikmadur(2);
     }
-    
+    /**
+     * Þetta fall segir okkur að það vinna leikinn og setur label með 
+     * vinningshafa, og lokar á að fleiri spili.
+     * @param leikmadur 
+     */
     public void Sigur(int leikmadur){
         jSigur.setText(dialogController.Nofn()[leikmadur-1] + " hefur unnið leikinn!");
         anchor.setDisable(true);
     }  
-
+    /**
+     * Þetta fall lokar forritinu.
+     * @param event 
+     */
     @FXML
     private void HaettaController(ActionEvent event) {
         System.out.println("Sjáumst Seinna!");

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author Ebba Þóra Hvannberg, Háskóli Íslands, ebba@hi.is
@@ -59,6 +54,12 @@ public class Mylla {
         nuverandiLeikmadur = n;
     }
     
+    /**
+    * @author Þorri Harðarson thh170@hi.is
+    *
+    * Fall sem sér um að hreinsa mylluborðið þegar að nýr leikur hefst.
+    */
+    
     public void HreinsaBord(){
         for(int i=0; i<3; i++){
             for(int j=0; j<3; j++){
@@ -89,6 +90,7 @@ public class Mylla {
      */
     public void setjaABord(int n) {
         bord[n / 3][(n % 3)] = nuverandiLeikmadur;
+        fjoldiPeda++;
     }
 
     /**
@@ -152,5 +154,11 @@ public class Mylla {
 
         // Skilar -1 ef ekki fannst vinningur, annars tölu á bilinu 0-7
         return vinningur;
+    }
+    
+    int fjoldiPeda = 0;
+    
+    public int FjoldiPeda(){
+        return fjoldiPeda;
     }
 }
