@@ -25,6 +25,23 @@
                </children></MyllaPane>
           <AnchorPane maxHeight="1000" maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefWidth="300.0" SplitPane.resizableWithParent="false">
                <children>
+                  <AnchorPane fx:id="anchor" layoutY="32.0" prefHeight="214.0" prefWidth="300.0">
+                     <children>
+                        <RadioButton fx:id="jLeikmadur1" layoutX="11.0" layoutY="27.0" mnemonicParsing="false" onAction="#leikmadur1Handler" prefHeight="80.0" prefWidth="270.0" text="Leikmaður 1 " textFill="CRIMSON">
+                           <font>
+                              <Font name="Yu Gothic Light" size="36.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Leikmenn" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="jLeikmadur2" layoutX="11.0" layoutY="95.0" mnemonicParsing="false" onAction="#leikmadur2Handler" prefHeight="80.0" prefWidth="270.0" text="Leikmaður 2" textFill="MEDIUMSEAGREEN" toggleGroup="$Leikmenn">
+                           <font>
+                              <Font name="Yu Gothic Light" size="36.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </AnchorPane>
                   <MenuBar prefHeight="32.0" prefWidth="300.0">
                     <menus>
                       <Menu mnemonicParsing="false" text="Skrá">
@@ -37,19 +54,6 @@
                   </MenuBar>
                   
                     <fx:include fx:id="dialog" source="dialog.fxml" />
-                  <RadioButton fx:id="jLeikmadur1" layoutX="11.0" layoutY="73.0" mnemonicParsing="false" onAction="#leikmadur1Handler" prefHeight="80.0" prefWidth="270.0" text="Leikmaður 1 " textFill="CRIMSON">
-                     <font>
-                        <Font name="Yu Gothic Light" size="36.0" />
-                     </font>
-                     <toggleGroup>
-                        <ToggleGroup fx:id="Leikmenn" />
-                     </toggleGroup>
-                  </RadioButton>
-                  <RadioButton fx:id="jLeikmadur2" layoutX="11.0" layoutY="153.0" mnemonicParsing="false" onAction="#leikmadur2Handler" prefHeight="80.0" prefWidth="262.0" text="Leikmaður 2" textFill="MEDIUMSEAGREEN" toggleGroup="$Leikmenn">
-                     <font>
-                        <Font name="Yu Gothic Light" size="36.0" />
-                     </font>
-                  </RadioButton>
                   <Label fx:id="skilabod" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="280.0" prefHeight="80.0" prefWidth="262.0" style="-fx-border-color: #3ca6cd;" textFill="#3ca6cd">
                      <font>
                         <Font name="Yu Gothic UI Light" size="28.0" />

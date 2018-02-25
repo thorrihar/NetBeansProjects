@@ -16,8 +16,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 /**
@@ -62,12 +60,9 @@ public class DialogPaneController implements Initializable {
         
         // og innihaldið sett í umgjörðina 
         d.setDialogPane(p);
-        // Haus, titill og mynd ef vill 
+        // Haus, titill
         d.setHeaderText("Hvað heitið þið?");
         d.setTitle("Nöfn leikmanna");
-        //d.setGraphic(new ImageView(new Image(getClass()
-              //  .getResourceAsStream("tic.png"))));
-
         // Hnapparnir Í lagi og hætta við búnir til og bætt við 
         ButtonType iLagi = new ButtonType("Í lagi", 
                 ButtonBar.ButtonData.OK_DONE);

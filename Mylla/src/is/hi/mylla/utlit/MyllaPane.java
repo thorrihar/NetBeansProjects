@@ -117,6 +117,7 @@ public class MyllaPane extends Pane {
     void NyrLeikur(){
         mAdal.jSigur.setText("");
         mAdal.birtaVilluskilaboð("");
+        mittBord.HreinsaBord();
         while(this.getChildren().size()>1){
             this.getChildren().remove(2);
         }

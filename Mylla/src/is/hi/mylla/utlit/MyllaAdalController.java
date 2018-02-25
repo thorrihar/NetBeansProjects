@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * Controller fyrir mylluna. Er núna mjög einfaldur 
@@ -44,6 +45,10 @@ public class MyllaAdalController implements Initializable {
     public Label jSigur;
     @FXML
     private MenuItem jHaetta;
+    //@FXML
+    //public AnchorPane anchor;
+    @FXML
+    public AnchorPane anchor;
     
     
     @Override
@@ -71,8 +76,9 @@ public class MyllaAdalController implements Initializable {
         dialogController.hvadHeitaLeikmenn();
         jLeikmadur1.setText(dialogController.Nofn()[0]);
         jLeikmadur2.setText(dialogController.Nofn()[1]);
-        myllaBord.mittBord.HreinsaBord();
+        anchor.setDisable(false);
         myllaBord.NyrLeikur(); 
+        
     }
 
     @FXML
@@ -91,6 +97,7 @@ public class MyllaAdalController implements Initializable {
     
     public void Sigur(int leikmadur){
         jSigur.setText(dialogController.Nofn()[leikmadur-1] + " hefur unnið leikinn!");
+        anchor.setDisable(true);
     }  
 
     @FXML
